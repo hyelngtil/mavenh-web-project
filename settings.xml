@@ -1,0 +1,35 @@
+<settings>
+
+ <servers>
+  <server>
+    <id>mavenh-mavenh-devops-repo-ci</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+ </servers>
+
+ <profiles>
+  <profile>
+    <id>mavenh-mavenh-devops-repo-ci</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>mavenh-mavenh-devops-repo-ci</id>
+        <url>https://mavenh-721605076466.d.codeartifact.eu-south-1.amazonaws.com/maven/mavenh-devops-repo-ci/</url>
+      </repository>
+    </repositories>
+  </profile>
+ </profiles>
+
+ <mirrors>
+  <mirror>
+    <id>mavenh-mavenh-devops-repo-ci</id>
+    <name>mavenh-mavenh-devops-repo-ci</name>
+    <url>https://mavenh-721605076466.d.codeartifact.eu-south-1.amazonaws.com/maven/mavenh-devops-repo-ci/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+ </mirrors>
+
+</settings>
